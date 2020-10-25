@@ -1,6 +1,13 @@
 import './App.css'
 import React from 'react'
 
+import Input from './components/Formulario/Input'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
+import ParOuImpar from './components/condicional/ParOuImpar'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import ListaAlunos from './components/repeticao/ListaAlunos'
 import Primeiro from './components/basicos/Primeiro'
 import ComParametro from './components/basicos/ComParametro'
 import Fragmento from './components/basicos/Fragmento'
@@ -15,6 +22,34 @@ export default () => (
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+
+            <Card titulo="#11 Componente Controlado (Input)" color="#E45F56">
+                <Input></Input>
+            </Card>
+
+            <Card titulo="#10 Comunicação Indireta" color="#8BAD39">
+                <IndiretaPai></IndiretaPai>
+            </Card>
+
+            <Card titulo="#09 Comunicação Direta" color="#59323C">
+                <DiretaPai></DiretaPai>
+            </Card>
+
+            <Card titulo="#08 Condicional" color="#982395">
+                <ParOuImpar numero={20}></ParOuImpar>
+                <UsuarioInfo usuario={{nome:'Fernando'}}/>
+                <UsuarioInfo usuario={{}}/>
+                <UsuarioInfo/>
+            </Card>
+
+            <Card titulo="#07 ListaProdutos" color="#FF432E">
+                <TabelaProdutos></TabelaProdutos>
+            </Card>
+
+            <Card titulo="#06 Repetição" color="#FF4C65">
+                <ListaAlunos></ListaAlunos>
+            </Card>
+
             <Card titulo="#05 Componente com Filhos" color="#00C8F8">
                 <Familia sobrenome="Silva">
                     <FamiliaMembro nome="Gustavo"/>
